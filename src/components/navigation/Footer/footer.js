@@ -7,7 +7,7 @@ import { pageurl } from "../../../utils/constants";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer px-lg-5">
       {/* FOOTER FOR SMALLER SCREENS */}
       <div className="row px-3 pt-3 d-md-none">
         <div className="col-6">
@@ -67,7 +67,7 @@ const Footer = () => {
 
       {/* FOOTER FOR MEDIUM SCREENS */}
       <div className="row d-none d-md-flex pt-3 px-md-3 px-lg-5">
-        <div className="col-md-2 pl-lg-4">
+        <div className="col-md-2 pl-lg-4 pl-xl-5">
           <img src={Logo} alt="brand logo"></img>
         </div>
         <div className="col-md-3">
