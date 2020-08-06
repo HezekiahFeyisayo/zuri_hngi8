@@ -73,9 +73,11 @@
   background-size: 50px;
 }
 
-.registration-form-select:focus, .registration-form-input, .registration-form-input:focus {
+.registration-form-select, .registration-form-select:focus, .registration-form-input, .registration-form-input:focus {
   box-shadow: none;
   border: 1px solid #514949;
+  border-radius: 0;
+
 } 
 
 .registration-form-input::placeholder {
@@ -87,7 +89,6 @@
 }
 
 .registration-form-check {
-
   display: none;
 }
 
