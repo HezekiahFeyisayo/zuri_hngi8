@@ -1,8 +1,6 @@
 import React from "react";
 import "./contact.css";
 
-import MapImage2 from "../../assets/images/contact/map-2.png";
-
 const Contact = () => {
   return (
     <div className="contact">
