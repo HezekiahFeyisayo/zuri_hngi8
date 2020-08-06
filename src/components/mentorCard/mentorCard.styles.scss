@@ -1,0 +1,66 @@
+.mentor-card {
+  max-width: 296px;
+  max-height: 380px;
+  height: max-content;
+  margin-bottom: 107px;
+
+  img {
+    max-height: 296px;
+    height: auto;
+    max-width: 296px;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .mentor-info {
+    position: relative;
+    width: 100%;
+    margin-top: 1.5rem;
+
+    h3 {
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: bold;
+      margin-right: 60px;
+    }
+
+    span {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .contact-links {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 18px;
+      width: 56.64px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0;
+
+      .link {
+        display: flex;
+        align-items: flex-end;
+
+        svg {
+          margin-top: auto;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .mentor-card {
+    margin-bottom: 64px;
+  }
+}
+
+@media (max-width: 475px) {
+  .mentor-card {
+    margin-bottom: 20px;
+  }
+}
