@@ -1,8 +1,113 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './registration.css';
+import Nationalities from './reg-nationalities'; 
+import Banner from '../landing/Banner'
 
 const Registration = () => {
+  const COUNTRY_API = process.env.REACT_APP_REG_COUNTRY_ACCESS_TOKEN;
+  const API_TOKEN = process.env.REACT_APP_REG_COUNTRY_API_TOKEN;
+  const API_EMAIL = process.env.REACT_APP_REG_COUNTRY_API_EMAIL;
+  const API_COUNTRIES = process.env.REACT_APP_REG_COUNTRIES;
+  const API_STATES = process.env.REACT_APP_REG_STATES;
+  const API_CITIES = process.env.REACT_APP_REG_CITIES;
+
+
+  const [authToken, setAuthToken] = useState('');
+
+  const [countries, setCountries] = useState([]);
+  const [country, setCountry] = useState('');
+
+  const [states, setStates] = useState([]);
+  const [state, setState] = useState('');
+
+  const [cities, setCities] = useState([])
+
+
+const onCountryChange = (e) => {
+  setCountry(e.target.value)
+}
+
+const onStateChange = (e) => {
+  setState(e.target.value)
+}
+
+  // fetch the data from the api
+
+  // get auth-token
+  useEffect ( () => {
+    const fetchData = async () => {
+      const response = await fetch(COUNTRY_API, {
+        method: 'GET',
+        headers: {
+          "Accept": "application/json",
+          "api-token": API_TOKEN,
+          "user-email": API_EMAIL
+        }
+      });
+      const data = await response.json()
+       setAuthToken(data.auth_token)
+    }
+    fetchData()
+  }, [API_TOKEN, API_EMAIL, COUNTRY_API]);
+
+  // fetch countries api
+  useEffect ( () => {
+    if (authToken) {
+      const fetchData = async () => {
+        const response = await fetch(API_COUNTRIES, {
+          method: 'GET',
+          headers: {
+            "Accept": "application/json",
+            "Authorization": `Bearer ${authToken}`
+          }
+        });
+        const data = await response.json()
+         setCountries(data)
+      }
+      fetchData()
+    }
+   
+  }, [API_COUNTRIES, authToken]);
+
+  // fetch states api
+  useEffect ( () => {
+    if (country) {
+      const fetchDataa = async () => {
+        const response = await fetch(`${API_STATES}${country}`, {
+          method: 'GET',
+          headers: {
+            "Accept": "application/json",
+            "Authorization": `Bearer ${authToken}`
+          }
+        });
+        const data = await response.json()
+         setStates(data)
+      }
+      fetchDataa()
+    }
+   
+  }, [API_STATES, authToken, country]);
+
+// fetch cities api 
+  useEffect ( () => {
+    if (state) {
+      const fetchDataa = async () => {
+        const response = await fetch(`${API_CITIES}${state}`, {
+          method: 'GET',
+          headers: {
+            "Accept": "application/json",
+            "Authorization": `Bearer ${authToken}`
+          }
+        });
+        const data = await response.json()
+        setCities(data)
+      }
+      fetchDataa()
+    }
+  
+  }, [API_CITIES, authToken, state]);
+
 
   return (
     <div className='registration-wrapper'>
@@ -85,27 +190,19 @@ const Registration = () => {
               <div className='col-lg-6'>
                 <div className='form-group py-2'>
                   <label htmlFor="country">Country</label>
-                  <select name="country" id="country" className='form-control registration-form-select'>
+                  <select name="country" id="country" onChange={onCountryChange} value={country} className='form-control registration-form-select'>
                     <option></option>
-                    <option value="america">America</option>
-                    <option value="canadia">Canada</option>
-                    <option value="india">India</option>
-                    <option value="italia">Italy</option>
-                    <option value="nigeria">Nigeria</option>
+                 { countries.map(({country_name}, i) => (
+                    <option value={country_name} key={i}>{country_name}</option>
+                  ))}
+                  
                   </select>
                 </div>
               </div>
               <div className='col-lg-6'>
                 <div className='form-group py-2'>
                   <label htmlFor="nationality">Nationality</label>
-                  <select name="nationality" id="nationality" className='form-control registration-form-select'>
-                    <option></option>
-                    <option value="american">American</option>
-                    <option value="canadian">Canadian</option>
-                    <option value="indian">Indian</option>
-                    <option value="italian">Italian</option>
-                    <option value="nigerian">Nigerian</option>
-                  </select>
+                  <Nationalities/>
                 </div>
               </div>
             </div>
@@ -129,27 +226,37 @@ const Registration = () => {
               <div className='col-lg-6'>
                 <div className='form-group py-2'>
                   <label htmlFor="state">State</label>
+                {country ? (
+                  <select name="state" id="state" onChange={onStateChange} value={state} className='form-control registration-form-select'>
+                  <option></option>
+                  {states.map(({state_name}, i) => (
+                    <option value={state_name} key={i}>{state_name}</option>
+                  ))}
+                </select>
+                ) : (
                   <select name="state" id="state" className='form-control registration-form-select'>
-                    <option></option>
-                    <option value="newyork">New York</option>
-                    <option value="toronto">Toronto</option>
-                    <option value="dehli">Dehli</option>
-                    <option value="rome">Rome</option>
-                    <option value="lagos">Lagos</option>
-                  </select>
+                  <option></option>
+                  <option value='select'>Select your country first</option>
+                </select>
+                )}
                 </div>
               </div>
               <div className='col-lg-6'>
                 <div className='form-group py-2'>
                   <label htmlFor="city">City</label>
+                  {state ? (
                   <select name="city" id="city" className='form-control registration-form-select'>
                     <option></option>
-                    <option value="newyork">New York</option>
-                    <option value="toronto">Toronto</option>
-                    <option value="dehli">Dehli</option>
-                    <option value="rome">Rome</option>
-                    <option value="lagos">Lagos</option>
+                    {cities.map(({city_name}, i) => (
+                      <option value={city_name} key={i}>{city_name}</option>
+                    ))}
                   </select>
+                  ) : (
+                  <select name="city" id="city" className='form-control registration-form-select'>
+                    <option></option>
+                    <option value='select'>Select your state first</option>
+                  </select>
+                  )}
                 </div>
               </div>
             </div>
@@ -187,7 +294,7 @@ const Registration = () => {
             </div>
 
             <div className='text-center py-4'>
-              <button className='btn registration-button px-3 py-2'>Submit</button>
+              <button className='registration-button px-3 py-2'>Submit</button>
             </div>
 
           </form>
@@ -198,6 +305,8 @@ const Registration = () => {
           </div>
         </div>
         </div>
+
+        <Banner />
       </div>
   )
 }
