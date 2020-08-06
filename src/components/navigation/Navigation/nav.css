@@ -1,8 +1,11 @@
+ 
+
 .navigation {
     box-sizing: border-box;
     padding: 0;
     margin:0;
-  }
+    overflow-x: hidden;
+}
 
   .activeLink {
     color: #e7332b!important;
