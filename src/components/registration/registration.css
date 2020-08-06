@@ -1,0 +1,133 @@
+.registration-wrapper {
+  font-family: 'Averta-Regular';
+  color: #514949;
+}
+
+.registration-header{
+  background:rgba(242, 235, 233, 0.6);
+  width: 100%;
+}
+
+.registration-header-body {
+  padding-top: 4rem;
+  padding-bottom: 7rem;
+}
+
+.registration-header-title, .registration-form-asterik, .registration-body-header, .registration-great-choice {
+  color: #E7332B;
+}
+
+.registration-great-choice {
+  font-size: 24px;
+}
+
+.registration-header-title {
+  font-family: 'Averta-Regular';
+}
+
+.registration-header-text {
+  color: #514949;
+  font-family: 'Averta-Bold';
+  line-height: 48px;
+}
+
+.registration-body-header {
+  line-height: 45px;
+  font-family: 'Averta-Bold';
+}
+
+.registration-input-file[type="file"]{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.registration-label {
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid #514949;
+  display: inline-block;
+	font-size: inherit;
+  margin-bottom: 1rem;
+  outline: none;
+  position: relative;
+  transition: all 0.3s;
+  vertical-align: middle;
+}
+
+.registration-form-select {
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border-radius: 0;
+  height: 50px;
+  border: 1px solid #514949;
+  background: url(../../assets/images/arrow.svg) no-repeat right;
+  -webkit-appearance: none;
+  background-position-x: 100%;
+  background-size: 50px;
+}
+
+.registration-form-select:focus, .registration-form-input, .registration-form-input:focus {
+  box-shadow: none;
+  border: 1px solid #514949;
+} 
+
+.registration-form-input::placeholder {
+ color: #C4C4C4;
+}
+
+.registration-form-option:hover {
+  background-color: #E7332B;
+}
+
+.registration-form-check {
+
+  display: none;
+}
+
+.registration-form-check + .registration-form-check-label {
+  background-color: #fafafa;
+	border: 1px solid #514949;
+	box-shadow: none;
+	padding: 12px;
+	border-radius: 0;
+	display: inline-block;
+	position: relative;
+}
+
+.registration-form-check + .registration-form-check-label:active, .registration-form-check:checked + .registration-form-check-label:active {
+	box-shadow: 0;
+}
+
+.registration-form-check:checked + .registration-form-check-label {
+	background-color: #E7332B;
+	border: 1px solid #514949;
+	box-shadow: 0;
+	color: #ffffff;
+}
+
+.registration-small-text {
+  font-size: 14px;
+  color: #4B4770;
+}
+
+.registration-form-check:checked + .registration-form-check-label::after {
+  content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 6px;
+	color: #ffffff;
+}
+
+.registration-button {
+  background-color: #E7332B;
+  color: #ffffff;
+  border-radius: 0%;
+}
