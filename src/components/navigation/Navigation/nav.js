@@ -1,17 +1,17 @@
-import React from "react";
-import BrandLogo from "../../../assets/images/logo.png";
-import { pageurl } from "../../../utils/constants";
-import { NavLink } from "react-router-dom";
-import Menu from "../../../assets/images/icons8-menu-24.png";
+import React from 'react';
+import BrandLogo from '../../../assets/images/logo.png';
+import { pageurl } from '../../../utils/constants';
+import { NavLink } from 'react-router-dom';
+import Menu from '../../../assets/images/icons8-menu-24.png';
 
-import "./nav.css";
+import './nav.css';
 
 const Navbar = () => {
   return (
     <div className="navigation">
       <header>
         <div className="container">
-          <nav className="navbar navbar-expand-lg navbar-light py-5 px-1 px-lg-5">
+          <nav className="navbar navbar-expand-lg navbar-light px-2">
             <a className="navbar-brand" href={pageurl.HOME}>
               <img
                 src={BrandLogo}
