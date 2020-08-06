@@ -38,16 +38,11 @@
     transition: all 0.5s;
 }
 
-.navigation  .jj:hover {
+.navigation  .nav-link:hover {
     color: #E7332B !important;
 }
 
-.navigation  header .h-btn {
-    background: #E7332B;
-    border-radius: 0;
-}
-
-@media screen and (min-width: 1000px) {
+@media (min-width: 1000px) {
     .navigation  header .h-btn {
         margin-left: 130px;
     }
@@ -76,16 +71,9 @@
     border-radius: 0;
 }
 
-@media screen and (min-width: 1000px) {
-    .navigation  header .h-btn {
-        margin-left: 100px;
-    }
-}
-
 .navigation .custom-btn {
     background-color: #E7332B;
     padding: 8px 20px !important;
-    /*text-align: center;*/
     color: #ffff !important;
     display: inline-block;
 

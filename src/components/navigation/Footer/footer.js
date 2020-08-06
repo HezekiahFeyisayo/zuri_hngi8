@@ -95,6 +95,9 @@ const Footer = () => {
               <a className="nav-link pl-0 pb-1" href={pageurl.TERMSCONDITIONS}>
                 Terms and Conditions
               </a>
+              <a className="nav-link pl-0 pb-1" href="/">
+                Become a Sponsor
+              </a>
             </nav>
           </div>
         </div>
