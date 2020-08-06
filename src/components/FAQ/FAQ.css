@@ -1,0 +1,119 @@
+@font-face {
+    font-family: "Averta";
+    src: local("Averta"), url(../../assets/fonts/Averta.woff) format("woff");
+  }
+  
+  @font-face {
+    font-family: "Averta-Bold";
+    src: local("Averta"), url(../../assets/fonts/Averta-Bold.woff) format("woff");
+  }
+  
+  @font-face {
+    font-family: "Averta-SemiBold";
+    src: local("Averta"),
+      url(../../assets/fonts/Averta-Semibold.woff) format("woff");
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+    font-family: averta;
+}
+
+.faq-title {
+    padding-top: 150px;
+    padding-bottom: 50px;
+    background: #F7F3F2;
+    width:100%
+}
+
+.faq-heading {
+    color: #E7332B;
+}
+
+.sub-footer-1 {
+    width: 100%;
+    padding: 70px 0;
+}
+
+.sub-footer-1 button, .sub-footer-2 button {
+    border-radius: 0;
+    background: #E7332B !important;
+}
+
+.sub-footer-2 {
+    background: #0B0B10;
+    width: 80%;
+    margin: 0 auto;
+    padding: 100px 0;
+    margin-bottom: 50px;
+}
+
+.faqs {
+    width: 80%;
+    margin: auto;
+    padding: 15px;
+}
+
+.faqs .faq {
+    margin: 15px;
+    padding: 30px 40px;
+    background: #F7F3F2;
+    border-radius: 8px;
+}
+
+.faqs .faq .faq-question {
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    padding-right: 80px;
+
+    transition:  all 0.4s ease;
+}
+
+.faqs .faq .faq-question:nth-child(8) {
+    color: red;
+}
+
+.faqs .faq .faq-question::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+
+    background-image: url('../../assets/images/arrow.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    transition: all 0.4s ease-out;
+}
+
+.faqs .faq .faq-answer {
+     opacity: 0;
+     max-height: 0;
+     overflow: hidden;
+     transition: all 0.4s ease-out;
+}
+
+.faqs .faq.open .faq-question {
+    margin-bottom: 15px;
+}
+
+.faqs .faq.open .faq-question::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.faqs .faq.open .faq-answer {
+    max-height: 1000px;
+    opacity: 1;
+    line-height: 2em;
+}
