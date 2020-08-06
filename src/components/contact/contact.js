@@ -1,7 +1,6 @@
 import React from "react";
 import "./contact.css";
 
-import MapImage from "../../assets/images/contact/map.png";
 import MapImage2 from "../../assets/images/contact/map-2.png";
 
 const Contact = () => {
@@ -76,19 +75,27 @@ const Contact = () => {
 
           {/*--CONTACT US MAP */}
           <div className="col-12 d-md-none mt-5 mt-md-0 px-md-5">
-            <img
-              src={MapImage}
-              alt="location map"
-              className="img-fluid w-100 px-4"
-            ></img>
+          <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.0987275624757!2d3.3773159140940234!3d6.509186125137082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8cf61c9c63c5%3A0x466a0e854a8645cb!2sStart.Ng!5e0!3m2!1sen!2sng!4v1596577599715!5m2!1sen!2sng"
+          title='map'
+           width="100%"
+           height="450"
+          frameBorder="0"
+           aria-hidden="false"
+           tabIndex="0">
+           </iframe>
           </div>
 
           <div className="d-none d-md-flex col-md-6 col-xl-4 mt-5 mt-md-0 px-md-5">
-            <img
-              src={MapImage2}
-              alt="location map"
-              className="img-fluid w-100"
-            ></img>
+          <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.0987275624757!2d3.3773159140940234!3d6.509186125137082!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8cf61c9c63c5%3A0x466a0e854a8645cb!2sStart.Ng!5e0!3m2!1sen!2sng!4v1596577599715!5m2!1sen!2sng"
+          title='map'
+           width="100%"
+           height="100%"
+          frameBorder="0"
+           aria-hidden="false"
+           tabIndex="0">
+           </iframe>
           </div>
 
           {/*--CONTACT US INFO */}
