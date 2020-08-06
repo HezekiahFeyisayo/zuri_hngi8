@@ -1,17 +1,22 @@
-import React from 'react';
-import './App.css';
-import TestComponent from './components/test.component';
+import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navbar from "./components/navigation/Navigation/nav";
+import Footer from "./components/navigation/Footer/footer";
 import Landing from './components/landing/Landing'
+
+import "./App.css";
 
 function App() {
   return (
-    <div  >
-  {/*    <h1>Hello World</h1> 
-      <TestComponent />
-    */}  
-
-      <Landing />
-    </div>
+    <Router>
+      <Navbar />
+      <Switch>
+          <Landing />
+        <Route exact path="/">
+        </Route>
+      </Switch>
+      <Footer />
+    </Router>
   );
 }
 

@@ -6,7 +6,7 @@ import about3 from "../../assets/images/about3.png";
 import rightRow from "../../assets/images/icons/rightRow.svg";
 
 const About = () => (
-  <section className="about my-4 py-5">
+  <section className="about my-4 py-0 py-lg-5 ">
     <div className="container">
       <h3 className="text-uppercase mt-2"> about zuri internship </h3>
       <h2 className="mb-lg-5 mb-0 ">
