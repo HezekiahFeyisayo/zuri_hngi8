@@ -187,7 +187,7 @@ const Registration = () => {
             </div>
 
             <div className='text-center py-4'>
-              <button className='btn registration-button'>Submit</button>
+              <button className='btn registration-button px-3 py-2'>Submit</button>
             </div>
 
           </form>
