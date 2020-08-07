@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navbar from "./components/navigation/Navigation/nav";
 import Footer from "./components/navigation/Footer/footer";
 import Contact from "./components/contact/contact";
+import CurriculumList from "./components/curriculum/Curriculum.coponent";
 
 import Registration from "./components/registration/registration"
 import { pageurl } from './utils/constants';
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/" component={Landing} />
         <Route exact path={pageurl.ENROLLMENT} component={Registration} />
         <Route exact path={pageurl.CONTACT} component={Contact}/>
+        <Route exact path={pageurl.CURRICULUM} component={CurriculumList}/>
         <Route exact path={pageurl.FAQ} component={FAQ}/>
         <Route exact path={pageurl.MENTORS} component={MentorsList} />
         <Route exact path={pageurl.PREVIOUSTECHIES} component={PreviousTechies} />
