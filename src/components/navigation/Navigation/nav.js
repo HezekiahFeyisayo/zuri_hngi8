@@ -1,5 +1,5 @@
 import React from 'react';
-import BrandLogo from '../../../assets/images/logo.png';
+import BrandLogo from '../../../assets/images/zuriLogo.png';
 import { pageurl } from '../../../utils/constants';
 import { NavLink } from 'react-router-dom';
 import Menu from '../../../assets/images/icons8-menu-24.png';
@@ -13,11 +13,7 @@ const Navbar = () => {
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-light px-2">
             <a className="navbar-brand" href={pageurl.HOME}>
-              <img
-                src={BrandLogo}
-                alt="brand logo"
-                className="brand-logo"
-              ></img>
+              <img src={BrandLogo} alt="brand logo" className="brand-logo" />
             </a>
             <button
               className="navbar-toggler border-0"
