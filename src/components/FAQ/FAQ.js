@@ -1,5 +1,6 @@
 import React, { useState  } from 'react';
 import FAQ2 from "./FAQ2";
+import Banner from '../landing/Banner'
 import "./FAQ.css";
 
 
@@ -87,10 +88,8 @@ function FAQ() {
               <h5>Contact Us</h5>
               <button className="btn btn-danger text-white px-4">Here</button>
           </div>
-          <div className="sub-footer-2 text-center">
-              <h5 className="text-white pb-5">Break into the tech industry like a pro</h5>
-              <button className="btn btn-danger text-white px-4">Enroll Today</button>
-          </div>
+              
+         <Banner />
   
         </div>
       );
