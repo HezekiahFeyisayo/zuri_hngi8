@@ -1,0 +1,76 @@
+.prev-head{
+  background: #f2ebe9;
+  padding-bottom: 7rem;
+  padding-top: 7rem;
+  text-align: center;
+}
+.txt-1{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: #E7332B;
+}
+.txt-2{
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 600;
+  color: #514949;
+}
+.top{
+  margin-top: 140px;
+  padding: 50px;
+  margin-bottom: 20px;
+}
+.prev-card{
+  background: #F7F3F2;
+  margin: auto;
+  margin-bottom: 100px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.prev-img{
+  width: 100%;
+}
+.prev-img > img {
+  width: 100%;
+}
+.txt-box{
+  padding: 20px 30px;
+}
+.name{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: #514949;
+}
+.title{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.75rem;
+  color: #514949;
+  font-weight: 400;
+}
+.comment{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  color: #514949;
+}
+.description{
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #000000;
+}
+.bottom{
+  margin-bottom: 150px;
+}
+.colll .collll{
+font-weight: normal;
+font-size: 48px;
+line-height: 58px;
+color: rgba(231, 51, 43, 0.48);
+}

@@ -7,6 +7,6 @@ export const pageurl = {
     CURRICULUM: "/Curriculum",
     MENTORS: "/Mentors",
     REQUESTCERTIFICATE: "Request-Certificate",
-    PREVIOUSTECHIES: "Previous-Techies",
+    PREVIOUSTECHIES: "/Previous-Techies",
     FAQ: "/Faq",
   };
