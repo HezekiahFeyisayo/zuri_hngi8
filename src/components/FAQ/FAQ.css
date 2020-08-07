@@ -1,3 +1,7 @@
+.navigation header {
+  background: #F7F3F2;
+}
+
 @font-face {
     font-family: "Averta";
     src: local("Averta"), url(../../assets/fonts/Averta.woff) format("woff");
@@ -55,7 +59,7 @@ body {
 }
 
 .faqs {
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding: 15px;
 }
