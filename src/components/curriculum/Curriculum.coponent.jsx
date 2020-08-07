@@ -3,22 +3,10 @@ import './Curriculum.style.css';
 import Banner from '../landing/Banner'
 
 class CurriculumList extends Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            tracks: [
-                {name: 'UI/UX Design', courseNo: '15 Courses', svgUrl: ''},
-                {name: 'Frontend Development', courseNo: '19 Courses', svgUrl: ''},
-                {name: 'Backend Development', courseNo: '22 Courses', svgUrl: ''},
-                {name: 'Mobile', courseNo: '20 Courses', svgUrl: ''},
-            ]
-        }
-    }
 
     render() {
         return (
-            <div>
+            <div className='curriculum'>
                 <section className='main-bg main-section'>
                     <div className='my-container'>
                         <div className="container-fluid">
@@ -358,9 +346,7 @@ class CurriculumList extends Component {
                     </div>
                 </section>
 
-
-
-                <Banner fluid/>
+                <Banner />
             </div>
         )
     }
