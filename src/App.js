@@ -9,6 +9,7 @@ import { pageurl } from './utils/constants';
 import FAQ from "./components/FAQ/FAQ";
 import Landing from './components/landing/Landing'
 import MentorsList from "./components/mentorsPage/mentorsPage.component";
+import PreviousTechies from "./components/previoustechies/previoustechies";
 
 import "./App.css";
 
@@ -22,6 +23,7 @@ function App() {
         <Route exact path={pageurl.CONTACT} component={Contact}/>
         <Route exact path={pageurl.FAQ} component={FAQ}/>
         <Route exact path={pageurl.MENTORS} component={MentorsList} />
+        <Route exact path={pageurl.PREVIOUSTECHIES} component={PreviousTechies} />
       </Switch>
       <Footer />
     </Router>
